@@ -7,8 +7,9 @@ from ui.mainwindow import Ui_MainWindow
 
 app = QtWidgets.QApplication(sys.argv)
 
+
 class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         super().__init__(parent)
 
         self.setWindowTitle("Rezepte")
@@ -55,8 +56,6 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.ui.rezepteTable.setItem(row, 0, QtWidgets.QTableWidgetItem(line[0]))
                 self.ui.rezepteTable.setItem(row, 1, QtWidgets.QTableWidgetItem(line[1]))
                 self.ui.rezepteTable.setItem(row, 2, QtWidgets.QTableWidgetItem(line[2]))
-
-
 
 
 window = MainWindow()
